@@ -1,0 +1,89 @@
+
+body
+{
+    width: 450px;
+    height: 550px;
+    margin: 0px;
+    padding: 10px;
+    font-family: verdana;
+    font-size: 10px;
+}
+
+div#itemDate
+{
+    font-size: 10px;
+    color: #858585;
+    margin: 0px 0px 5px 0px;
+    float: right;
+}
+h1, h2, h3, h4
+{
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+}
+h2
+{
+    font-size: 10px;
+}
+h1
+{
+    font-size: 20px;
+}
+
+div#container
+{
+    width: 96%;
+    height: 96%;
+    overflow: auto;
+}
+div#itemContents
+{
+    width: 96%;
+    overflow: hidden;
+}
+img
+{
+    border: 0px;
+    margin: 5px;
+}
+a
+{
+    color: #000000;
+}
+
+img#bckgrndimg
+{   z-index: -1000;
+    position: fixed;
+    display: block;
+    bottom: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+img#plus
+{   z-index: 250;
+    position: fixed;
+    display: block;
+    top: 0px;
+    right: 15px;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+img#minus
+{   z-index: 250;
+    position: fixed;
+    display: block;
+    top: 0px;
+    right: 0px;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+

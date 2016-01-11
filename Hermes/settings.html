@@ -1,0 +1,626 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0016)http://localhost -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Settings</title>
+    <link rel="stylesheet" type="text/css" href="settings.css" />
+    <link rel="stylesheet" type="text/css" href="selectbox.css" />
+</head>
+
+<script language="javascript" type="text/javascript" src="utils.js"></script>
+<script language="javascript" type="text/javascript" src="settings.js"></script>
+<script language="javascript" type="text/javascript" src="jscolor.js"></script>
+<script language="javascript" type="text/javascript" src="selectbox.js"></script>
+
+<body>
+    <div class="tabcontrol" id="tabcontainer">
+        <div class="tab selectedtab" id="tabfeeds" style="display: block;">
+            Feeds</div>
+        <div class="tab" id="tabpages" style="display: block;">
+            Pages</div>
+        <div class="tab" id="tabalerts" style="display: block;">
+            Alerts</div>
+        <div class="tab" id="tabcats" style="display: block;">
+            Cats</div>
+        <div class="tab" id="tabfilters" style="display: block;">
+            Filters</div>
+        <div class="tab" id="taboptions" style="display: block;">
+            Options</div>
+        <div class="tab" id="tabdisplay" style="display: block;">
+            Display</div>
+        <div class="tab" id="tabproxy" style="display: block;">
+            Proxy</div>
+        <div class="tab" id="tabhelp" style="display: block;">
+            Help</div>
+    </div>
+    <div class="tabcontents" style="display: none;" id="help">
+        <table>
+            <tr>
+                <td>
+                   <input class="button" type="button" id="helpbutton" value="Manual" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="button" type="button" id="changesbutton" value="Changes" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="button" type="button" id="readmebutton" value="Readme" />
+                </td>
+            </tr>
+            <tr>
+            <td>
+                <input class="button" type="button" id="aboutbutton" value="About" />
+            </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tabcontents" style="display: none;" id="proxy">
+        Make connections via a proxy:
+        <table>
+            <tr>
+                <td>
+                    Proxy server:
+                </td>
+                <td>
+                    <input class="inputtextproxy" type="text" name="proxyserver" id="proxyserver" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Username:
+                </td>
+                <td>
+                    <input class="inputtextproxy" type="text" name="proxyusername" id="proxyusername" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input class="inputtextproxy" type="password" name="proxypassword" id="proxypassword" />
+                </td>
+            </tr>
+            <tr>
+            <td></td>
+            <td><input type="button" id="testsettingbutton" value="test settings"
+                title="Press this to test proxy settings."/>
+            </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tabcontents" style="display: none;" id="display">
+        <table>
+            <tr>
+                <td colspan="3">
+                    Font &amp; Colors:
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Family:
+                </td>
+                <td>
+                    <input type="text" name="fontfamily" id="fontfamily" title="Type in a font name, or select one from list." />
+                </td>
+                <td>
+                    &nbsp;Size:
+                    <select class="selectstyle" name="fontsize" id="fontsize">
+                        <option value="8px">8px</option>
+                        <option selected="selected" value="9px">9px</option>
+                        <option value="10px">10px</option>
+                        <option value="11px">11px</option>
+                        <option value="12px">12px</option>
+                        <option value="14px">14px</option>
+                        <option value="16px">16px</option>
+                        <option value="18px">18px</option>
+                        <option value="20px">20px</option>
+                        <option value="22px">22px</option>
+                        <option value="24px">24px</option>
+                        <option value="26px">26px</option>
+                        <option value="28px">28px</option>
+                        <option value="30px">30px</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr style="text-align: right">
+                <td>
+                    &nbsp;&nbsp;Contrast:
+                    <input class="displaycontrasttext" type="text" name="contrast" id="contrast" title="Set opacity of font (0 to 100)." />
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Weight:
+                    <select class="selectstyle" name="fontweight" id="fontweight">
+                        <option value="lighter">lighter</option>
+                        <option selected="selected" value="normal">normal</option>
+                        <option value="bold">bold</option>
+                        <option value="bolder">bolder</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="text-align: right">
+                <td>
+                    Text:
+                    <input class="feedcolor" type="text" name="textcolor" id="textcolor" />
+                </td>
+                <td>
+                    Line:
+                    <input class="feedcolor" type="text" name="linecolor" id="linecolor" />
+                </td>
+            </tr>
+            <tr style="text-align: right">
+                <td>
+                    Divider:
+                    <input class="feedcolor" type="text" name="dividercolor" id="dividercolor" />
+                </td>
+                <td>
+                    Background:
+                    <input class="feedcolor" type="text" name="backgroundcolor" id="backgroundcolor"
+                        title="Leave blank for Classic look." />
+                </td>
+            </tr>
+            <tr style="text-align: right">
+                <td>
+                    Border:
+                    <input class="feedcolor" type="text" name="bordercolor" id="bordercolor" title="Leave blank for Classic look." />
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr style="text-align: right">
+                <td>
+                    Scrollbar:
+                    <input class="feedcolor" type="text" name="scrollbarcolor" id="scrollbarcolor" title="Scrollbar buttons will be a shade of this color." />
+                </td>
+                <td>
+                    &nbsp;Opacity:
+                    <input class="displaycontrasttext" type="text" name="transparency" id="transparency"
+                        title="Set scrollbar opacity (0 to 100)." />
+                </td>
+            </tr>
+        </table>
+        <table id="imagepreviewtable">
+            <tr>
+                <td>
+                    Image:
+                </td>
+                <td>
+                    <input type="text" name="backgroundimage" id="backgroundimage" title="Type in background image url, or select one from list, blank=default." />
+                </td>
+                <td>
+                    &nbsp;&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Preview:
+                </td>
+                <td id="previewtablecell">
+                    <div id="previewbox">
+                        The quick brown fox jumped over the fence and ran away.</div>
+                </td>
+                <td>
+                    &nbsp;&nbsp;
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <input type="checkbox" name="horizontal" id="horizontal" />Scroll horizontally.
+                </td>
+                <td align="right">
+                    Scroll rate:
+                    <input type="text" id="scrollrate" style="width: 35px" title="(ms, default=50, zero=off)" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <input type="checkbox" name="hidehover" id="hidehover" title="Stops item title-url hover from appearing." />/<input 
+                    type="checkbox" name="hidescrollbar" id="hidescrollbar" title="Stops scroll bar from appearing." />Hide
+                    hover/scroll bar.
+                </td>
+                <td align="right">
+                    Auto click:
+                    <input type="text" id="autoclick" style="width: 35px" title="Automatically show article after hovering for this long (seconds, zero=off)" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="righttoleft" id="righttoleft" title="Show text in right to left direction." />Right
+                    to left.
+                </td>
+                <td align="right">
+                    Width:
+                    <input type="text" id="scrollwidth" style="width: 35px" title="Width in pixels (zero=off)." />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="lineseparator" id="lineseparator" />Separate items
+                    with a line.
+                </td>
+                <td align="right">
+                    Height:
+                    <input type="text" id="scrollheight" style="width: 35px" title="Height in pixels, (zero=off)." />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tabcontents" style="display: none;" id="options">
+        <table>
+            <tr>
+                <td colspan="2" align="left">
+                    Rules:
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    New flag duration:
+                </td>
+                <td>
+                    <input type="text" id="flagduration" class="flagduration" style="width: 50px"
+                        title="Time duration over which to show the new item flag, default units is minutes." />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Keep duration:
+                </td>
+                <td>
+                    <input type="text" id="keepduration" class="keepduration" style="width: 50px"
+                    title="Time duration for which to show the item, default units is minutes." />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Age since pub date:
+                </td>
+                <td>
+                    <input type="text" id="ageofitem" class="ageofitem" style="width: 50px" 
+                    title="Time duration since publication for which to show the item, default units is minutes."/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Read by date:
+                    <input type="text" id="readbydate" class="readbydate" style="width: 190px" 
+                        title="Format: MM-DD-YYYY HH:MM:SS, blank=current date, zero=off." />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td colspan="2" align="left">
+                    Flags:
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="clicktosetreadbydate" id="clicktosetreadbydate" />
+                </td>
+                <td>
+                    Clicking item sets read by date to pub date.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="clicktoremoveflag" id="clicktoremoveflag" />
+                </td>
+                <td>
+                    Clicking item removes new flag.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="hideifread" id="hideifread" />
+                </td>
+                <td>
+                    Hide item once read.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="searchcache" id="searchcache" />
+                </td>
+                <td>
+                    Allow searching cache of read items.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="sortbydate" id="sortbydate" title="Sort all items by pub date." />
+                </td>
+                <td>
+                    (<input type="checkbox" name="sortbyload" id="sortbyload" title="Sort all items by load date." />)
+                    Sort scroll list by pub (load) date.
+                </td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <td align="left">
+                    Settings:
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input class="setbutton" type="button" id="settingsimportButton" value="import" title="Import settings from xml file." />
+                    <input class="setbutton" type="button" id="settingsmergeButton" value="merge" title="Merge settings from xml file." />
+                    <input class="setbutton" type="button" id="settingsexportButton" value="export" title="Export settings to xml file." />
+                    <input class="setbutton" type="button" id="settingsrestoreButton" value="restore"
+                        title="Restore settings to default values." />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tabcontents" style="display: block;" id="feeds">
+        <span>
+            Current feeds:&nbsp;
+            <select id="catfeedlist" class="catdrops" size="1">
+            </select>
+        </span>
+        <div id="feedlist">
+        </div>
+        <div>
+            <table width="100%">
+            <tr><td colspan="2">Date display format: <input type="text" id="datedisplayformat" 
+                class="datedisplay" title="See help for format specifiers. Leave blank to use original format."/></td></tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="flushcache" id="flushcache" />&nbsp;Flush cache.
+                    </td>
+                    <td>
+                        <input type="checkbox" name="crosscompare" id="crosscompare" />&nbsp;Cross compare.
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <input class="button" type="button" id="addButton" value="add feed" />
+                        <input class="smallbutton" type="button" id="toggleButton" value="toggle" />
+                    </td>
+                    <td align="right">
+                        <input class="mediumbutton" type="button" id="importButton" value="FM import" title="Import RSS feeds from FeedsManager." />
+                        <input class="mediumbutton" type="button" id="exportButton" value="FM export" title="Export RSS feeds to FeedsManager." />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="popupbox" id="feedaddbox">
+            <table class="popuptable" id="feedaddtable">
+                <tr>
+                    <td colspan="2" align="center">
+                        Add a new RSS / RDF / Atom feed
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="left">
+                       <input type="checkbox" name="addviafm" id="addviafm" title="Tick this to load RSS via FM." />
+                        Tick to add feed via Feeds Manager.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="left" >
+                        Feed URL: <input class="textfield" type="text" id="newurl" />
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td>
+                        <input class="button" type="button" id="ConfirmAddFeedButton" value="OK" />
+                    </td>
+                    <td>
+                        <input class="button" type="button" id="CancelAddFeedButton" value="Cancel" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="tabcontents" style="display: none;" id="pages">
+        <span>
+            Current pages:&nbsp;
+            <select id="catpagelist" class="catdrops" size="1">
+            </select>
+        </span>
+        <div id="pagelist">
+        </div>
+        <div id="pagefooter">
+            <table width="100%">
+                <tr>
+                    <td align="left">
+                        Test&nbsp;text:
+                    </td>
+                    <td align="right">
+                        <input class="button" type="button" id="patternPageButton" value="test on text" title="Use test text to test pattern." />
+                    </td>
+                    <td align="right">
+                        <input class="button" type="button" id="testPageButton" value="test on url" title="Get page via url and test pattern on it." />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="text" id="testtext" style="width: 280px" />
+                    </td>
+                </tr>
+            </table>
+            <table width="100%">
+                <tr>
+                    <td align="left">
+                        <input class="button" type="button" id="addPageButton" value="add page" />
+                        <input class="smallbutton" type="button" id="togglePageButton" value="toggle" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="tabcontents" style="display: none;" id="alerts">
+        <span>
+           Current alerts:&nbsp;
+            <select id="catalertlist" class="catdrops" size="1">
+            </select>
+        </span>
+        <div id="alertlist">
+        </div>
+        <div id="alertfooter">
+            <table width="100%">
+                <tr>
+                    <td>
+                        SMTP server:
+                    </td>
+                    <td colspan="2">
+                        <input type="text" id="smtpserver" style="width: 140px" title="URL of mail server." />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        User name:
+                        <input type="text" id="smtpusername" style="width: 100px" title="User/account name on SMTP server." />
+                    </td>
+                    <td>
+                        Password:
+                        <input type="text" id="smtppassword" style="width: 80px" title="Password for user/account on SMTP server." />
+                    </td>
+                    <td>
+                        Port:
+                        <input type="text" id="smtpport" style="width: 25px" title="Port to use on SMTP server." />
+                    </td>
+                    <td>
+                        SSL:
+                        <input type="checkbox" id="smtpusessl" title="Tick this to use SSL over port." />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        From&nbsp;email&nbsp;address:
+                    </td>
+                    <td colspan="3">
+                        <input type="text" id="fromaddress" style="width: 140px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sound file path:
+                    </td>
+                    <td colspan="3">
+                        <input type="text" id="soundfile" style="width: 140px"
+                            title="Path to a .wav file."
+                         />
+                    </td>
+                </tr>
+            </table>
+            <table width="100%">
+                <tr>
+                    <td align="left">
+                        <input class="mediumbutton" type="button" id="addAlertButton" value="add alert" />
+                        <input class="smallbutton" type="button" id="toggleAlertButton" value="toggle" />
+                        <input class="mediumbutton" type="button" id="testEmailButton" value="test email"
+                            title="Pressing this will attempt to send a message to the 'To' email address." />
+                        <input class="mediumbutton" type="button" id="testSoundButton" value="test sound"
+                            title="Pressing this will play the sound file." />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+     <div class="tabcontents" style="display: none;" id="filters">
+        <span>Current filters:</span>
+        <div id="filterlist">
+        </div>
+        <div id="filterfooter">
+            <table width="100%">
+                <tr>
+                    <td>
+                        New filter name: <input class="textnamefield" type="text" id="filtername" />
+                    </td>            
+                </tr>
+                <tr>
+                    <td align="left">
+                        <input class="button" type="button" id="addFilterButton" value="add filter" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="tabcontents" style="display: none;" id="cats">
+        <span>Current categories &amp; folders:</span>
+        <div id="catlist">
+        </div>
+        <div id="catfooter">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <input type="checkbox" name="filterbycategory" id="filterbycategory" title="Filter items by category." />
+                        Filter.
+                    </td>
+                    <td>
+                        <input type="checkbox" name="showifnew" id="showifnew" title="Show items having a category that is not in current list." />
+                        Show if new.
+                    </td>
+                    <td>
+                        <input type="checkbox" name="hideifnone" id="hideifnone" title="Hide items that have no category information." />
+                        Hide if none.
+                    </td>
+                </tr>
+            </table>
+            <table width="100%">
+                <tr>
+                    <td>
+                        Category name:
+                    </td>
+                    <td>
+                        <input type="text" id="catname" style="width: 160px" />
+                    </td>
+                </tr>
+            </table>
+            <table width="100%">
+                <tr>
+                    <td align="left">
+                        <input class="button" type="button" id="addCatButton" value="add category" title="Adds a new category for items." />
+                        <input class="mediumbutton" type="button" id="addFolderButton" value="add folder" title="Adds a new folder for feeds, pages and alerts - simply prefixes with '@'." />
+                        &nbsp;&nbsp;
+                        <input class="smallbutton" type="button" id="toggleCatButton" value="toggle" />
+                    </td>
+                    <td align="right">
+                        <input class="smallbutton" type="button" id="renameCatButton" value="rename" title="Rename or merge selected category/folder: merges if existing name given." />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="popupbox" id="catdeletebox">
+            <table id="catdeletetable">
+                <tr>
+                    <td colspan="3" align="center">
+                        Removing a folder will delete all it's feeds, pages and alerts too.
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" colspan="2">
+                        <input type="checkbox" name="confirmdelete" id="confirmdelete" />
+                        Confirm removals.
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td>
+                        <input class="button" type="button" id="DeleteCategoryButton" value="OK" />
+                    </td>
+                    <td>
+                        <input class="button" type="button" id="CancelDeleteCategoryButton" value="Cancel" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="messagebox" style="display: block;">
+    </div>
+    <div id="picker" style="display: block;">
+    </div>
+    <div id="footer" style="display: block;">
+        <input class="button" type="button" id="okButton" value="OK" />
+        <input class="button" type="button" id="cancelButton" value="Cancel" />
+    </div>
+</body>
+</html>

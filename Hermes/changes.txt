@@ -1,0 +1,196 @@
+HERMES RSS READER
+
+
+VERSION 1.0.1
+
+2007-12-29 : scrollbar only visible while the cursor is actually hovering it
+
+VERSION 1.0.2
+
+2007-12-30 : Asyncronous loading of feeds
+2007-12-30 : Activity icon display when loading feeds
+2007-12-30 : Changed the exclamationmark that represents a recently added item to the list of feeds with a more pleasant icon
+2007-12-30 : Changed the visual effect when hovering a item in the list
+2007-12-30 : Maximised the horizontal space an item has to display its title.
+
+VERSION 1.0.3
+
+2007-12-31 : Fixed bug that prevented clicking the upparrow on the scrollbar
+2007-01-01 : Added search functionality
+2007-01-01 : Added individual update interval parameters for each feed
+2007-01-01 : Added scrollspeed settings
+
+VERSION 1.0.3.5
+
+2007-01-03 : Added resizability of the gadgets height
+
+VERSION 1.0.4
+
+2007-01-05 : Doubleclicking an item now opens it in a new browserwindow
+2007-01-04 : Doubleclicking an item now opens the link directly in a browserwindow
+
+VERSION 1.0.5
+
+2007-01-08 : Added settings for font (main window)
+2007-01-10 : Added proxy settings in konfiguration window
+2007-01-10 : Height of applikation is saved and restored on startup
+
+VERSION 1.0.5.5
+
+2007-01-11 : fixed a bug where a newsitem would not display in the detailed window
+2007-01-11 : added donation window
+
+VERSION 1.0.5.8
+
+2007-01-12 : Fixed a bug where items would appear twice in the scrolling list
+2007-01-12 : Added settings for new flag duration
+
+VERSION 1.0.6.0
+
+2007-01-12 : Added option for displaying feed title above each newsitem in the scrolling list
+
+VERSION 1.0.6.1
+
+2007-01-12 : Memory management fixes
+
+VERSION 1.0.6.5
+
+2007-01-17 : Started on separation of localestrings and code to ease translation
+2007-01-19 : Added a feature of sharing RSS feeds with others in the settings
+
+
+VERSION 1.0.6.6
+
+2007-01-26 : Some visual adjustments to the theme
+2007-01-27 : added an option for displaying the line separator or not between each feed
+
+VERSION 1.0.6.7
+
+2007-01-26 : Fixed a bug where items with same title did not get displayed properly
+
+VERSION 2.0.0.0
+
+2010-06-22 : Major refactoring and optimising, particularly the scroll loop, 
+             e.g. added NewsItem object for tracking read state,
+             used some globals rather than doc elements,
+             improved gui data transfer.
+             Added Read By Date, Age, Hide, Top X, Enable Feed, click to remove (etc.) options.
+             Changed default feed to Reuters because of Google feed date format error.
+             Added help, import & export.
+             Fixed numerous bugs.
+             
+2010-06-26 : Added Keep Duration and fixed bug in duration checking.
+
+VERSION 2.0.0.1
+
+2010-06-27 : Fixed bugs in search keyword filter, option flag checking.
+
+VERSION 2.1.0.0
+
+2010-06-28 : Added mouse keys for deleting etc.
+             Added no scroll option.
+             Added auto stop scrolling when few items.
+             Added a heart-beat icon.
+             Added fetching items via FeedsManager.
+             Added an item cache so options can be twiddled while preserving item read status.
+             Bug when removing items: wasn't updating feed line separator properly.
+
+VERSION 2.1.0.1
+
+2010-07-23 : Made previewbox background black.
+             Corrected typos in help page.
+             Added zero test for flagduration.
+
+VERSION 2.2.0.0
+
+2010-08-24 : Added Categories.
+             Added Page Monitoring functionality: used to check gallery for updates etc.
+             Added Alert functionality: used to trigger sound, flyout or email on news event.
+             Added Right To Left layout option.
+             Added resizable and horizontal scroll.
+             Added import, export, restore functionality for settings.
+             Added "sort by pub or load date across all feeds" option.
+             Added postfix unit specifier for time values.
+             Added combo dropdown lists for display options and color picker.
+             Refactored html structure of pages.
+             Refactored settings mechanism. Changed Settings activation to a wrench icon
+             on menu bar rather than via sidebar.
+
+VERSION 2.2.0.1
+
+2010-11-22 : Added custom background image.
+
+VERSION 2.2.0.2
+
+2010-12-17 : Added code to reposition popups on screen when gadget borders are near screen edges,
+             in otherwords, in large horizontal mode, flyouts now appear on screen rather than off screen!
+             Added option to disable scroll bar from appearing.
+             Added option to automatically click on item after hovering for given number of seconds.
+             This functionality needs more work: flyout does not always appear for some reason.
+ 
+VERSION 2.2.0.3
+
+2011-05-05 : Added optional date format string specifier per feed and page.
+
+VERSION 2.3.0.0
+
+2011-07-26 : Bug fix: item popup wasn't updating for subsequent item selections.
+             Bug fix: made more resilent deleting of feeds,pages,alerts,cats.
+             Bug fix: different versions of XML ActiveXObjects were being used - now same versions used.
+             Bug fix: changed to using style sheet to dump xml settings - DomDocument.6.0 wasn't indenting.
+             Bug fix: made node ID generation truely unique - some fast machines were generating duplicate ids.
+             Bug fix: settings tab positioning when selected from menu bar.
+             Bug fix: no more crashing sidebar on uninstalling.
+             Bug fix: no more opening gadget file on installation.
+             Bug fix: cater for feeds without names, uses url.
+             Added Filters based on regular expressions.
+             Revamped settings dialogs with collapsible option sections.
+             Added namespace skipping when reading feed files because newer versions
+               of DOM XPath now default to using namespaces.
+             Added basic auto support for Atom feeds.
+             Added feed load error message notification. 
+             Added custom scrollbar and color setting options.
+             Added merge option to settings import.
+             Removed old locale mechanism.
+             Added time zone support & output date format specifier.
+             Persisted cache across shutdown and startups.
+
+VERSION 2.3.0.1
+
+2011-09-26 : Added option to hide item title-url hover.
+             Made default colors same as version 1.0.
+             Added collapsible divs to help page.
+             
+VERSION 2.3.0.2
+
+2011-10-06 : Bug fix: Now retains non-standard pub-dates for display rather than current date.
+2012-02-11 : Bug fix: Added filter to item description to fix src url's with missing protocol specifier.
+2012-02-11 : Added localhost doc prefix to details.html.
+2012-02-11 : Added help tab with changes, readme and about buttons in order to overcome change in
+             policy of ie8, ie9 that now restricts local file access.
+2012-02-11 : Changed Admin pages to check hermesgadget.codeplex.com rather than defunct gallery.
+
+
+VERSION 2.3.0.3
+
+2012-02-12 : Changed id's of revised admin pages so that not overwritten when merging options with old.
+              Note: when merging prior saved options, delete old Admin pages and Alerts: new
+              versions have new Ids and contain the word 'web' in title.
+2012-02-12 : Changed background color of add feed dialog to lighter shade of grey.
+2012-02-12 : Added localhost url tag to help pass security checks.
+2012-02-12 : Changed to using System.Sound.playsound for Alert notifications to avoid embed and audio tag pains.
+             This restricts sound file format to wav only.
+             
+VERSION 2.3.0.4
+
+2012-05-18 : Bug fix: ReplaceAll function, string length property name was capitalised!
+             This meant some feeds, such as google, would either cause pc to lock or mem overflow!
+
+VERSION 2.3.0.5
+
+2012-07-10 : Bug fix : Settings dialog fonts not scaling correctly for Windows DPI > 100%. 
+             Cause was missing font-size specifier in css tabcontentsnormal class.
+
+VERSION 2.3.0.6
+
+2014-01-23 : Bug fix: scroll bar didn't work when scroll rate set to zero.

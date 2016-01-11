@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<gadget>
+    <name>Hermes (v2.3.0.6)</name>
+    <namespace>Hermes</namespace>
+    <version>2.3.0.6</version>
+    <author name="Open Source">
+        <logo src="images/hermes.jpg"/>
+    </author>
+    <icons>
+        <icon height="48" width="48" src="images/hermes.jpg"/>
+    </icons>
+    <copyright>&#169; 2008 - 2014</copyright>
+    <description>Open source auto-scrolling RSS/Atom reader.</description>
+    <hosts>
+        <host name="sidebar">
+            <base type="HTML" apiVersion="1.0.0" src="main.html" />
+            <permissions>Full</permissions>
+            <platform minPlatformVersion="1.0" />
+            <defaultImage src="images/hermes.jpg"/>
+        </host>
+    </hosts>
+</gadget>

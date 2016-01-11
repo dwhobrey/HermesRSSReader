@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0016)http://localhost -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="search.css" />
+</head>
+<script language="javascript" type="text/javascript" src="utils.js"></script>
+<script language="javascript" type="text/javascript" src="search.js"></script>
+<body>
+<img id="bckgrndimg" src="images/searchbg.jpg"/>
+<div id="container">
+<table id="parameters">
+    <tr>
+        <td align="left">Folder: <select id="feedsearchlist" size="1"></select>
+        </td>
+        <td align="right">Categories:</td>
+        <td rowspan="5"><select id="catsearchlist" size="6" multiple="multiple"></select></td>
+    </tr>
+    <tr>
+      <td align="left">
+        And:<input id="andwords" type="checkbox" title="Must contain all keywords."/>words,
+        &nbsp;<input id="andcats" type="checkbox" title="Must be member of all selected categories."/>cats.
+      </td>
+      <td align="left">
+        <input id="sort" type="checkbox" title="Sort by publication date."/> Sort.
+      </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="left">Keywords (comma separated):</td>            
+    </tr>
+    <tr>
+        <td colspan="2" align="left"><input id="keywords" type="text" 
+            title="Enter an optional comma separated list of keywords."/></td>
+    </tr>
+    <tr>
+        <td><input id="searchButton" type="button" value="Search"/>&nbsp;
+            <input type="button" id="saveButton" value="Save filter and close"/>
+        </td>
+        <td align="left"><span id="matches">Results: </span>
+        </td>
+    </tr>
+    </table>
+    <div id="results">
+    </div>
+</div>
+<img id="plus" src="images/plus.gif"/>
+<img id="minus" src="images/minus.gif"/>
+</body>
+</html>

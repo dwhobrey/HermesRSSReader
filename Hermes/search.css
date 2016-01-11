@@ -1,0 +1,222 @@
+body
+{
+    width: 500px;
+    height: 500px;
+    margin: 0px;
+    padding: 10px;
+    font-family: verdana;
+    font-size: 12px;
+}
+
+a
+{
+    color: #aaaaaa;
+}
+
+input
+{
+    font-size: 12px;
+}
+
+div#container
+{   width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+table#parameters
+{   width: 99%;
+    position: fixed;
+    top: 10px;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    color: White;
+}
+table#matchparameters
+{   width: 97%;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    color: White;
+}
+select#feedsearchlist 
+{
+    color: black;
+    background-color: #dedede;
+}
+
+select#catsearchlist 
+{
+    color: black;
+    background-color: #dedede;
+    width: 200px; 
+    overflow-x: auto;
+    scrollbar-3dlight-color: #252525;
+    scrollbar-arrow-color: #252525;
+    scrollbar-base-color: #252525;
+    scrollbar-darkshadow-color: #252525;
+    scrollbar-face-color: #454545;
+    scrollbar-highlight-color: #656565;
+    scrollbar-shadow-color: #454545;
+}
+
+input#keywords
+{   width: 98%;
+    border: 1px solid #656565;
+    background-color: #dedede;
+}
+
+input#searchButton
+{   
+    background-color: #454545;
+    color: white;
+    border: 1px solid #656565;
+    border-right-color: #252525;
+    border-bottom-color: #252525;
+}
+
+input#saveButton
+{   
+    background-color: #454545;
+    color: white;
+    border: 1px solid #656565;
+    border-right-color: #252525;
+    border-bottom-color: #252525;
+    width: 120px;
+}
+
+span#matches
+{   
+    background-color: #454545;
+    color: white;
+    border: 1px solid #656565;
+    border-right-color: #252525;
+    border-bottom-color: #252525;
+}
+
+div#results
+{   position: fixed;
+    top: 114px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid #858585;
+    margin-top: 3px;
+    padding-left: 2px;
+    color: #dedede;
+    font-size: 12px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #dedede;
+    scrollbar-3dlight-color: #252525;
+    scrollbar-arrow-color: #252525;
+    scrollbar-base-color: #252525;
+    scrollbar-darkshadow-color: #252525;
+    scrollbar-face-color: #454545;
+    scrollbar-highlight-color: #656565;
+    scrollbar-shadow-color: #454545;
+}
+
+.cattitle 
+{   color: black;
+    font-weight: bold;
+}
+
+.details
+{
+    height: auto;
+    color: black;
+    background-color: white;
+    border: 1px dashed #dedede;
+    overflow: hidden;
+}
+.matchtable
+{   padding-right:40px;
+    width: 95%;
+    color: Black;
+    background-color: white;
+    padding: 3px;
+    font-family: verdana;
+    font-size: 10px;
+    border-collapse:collapse;
+}
+
+.matchtablealt
+{   padding-right:40px;
+    width: 95%;
+    color: Black;
+    background-color:  #eeeeee;
+    padding: 3px;
+    font-family: verdana;
+    font-size: 10px;
+    border-collapse:collapse;
+}
+
+.match
+{
+}
+
+.match td {
+    border-top: 1px dashed #858585;
+}
+
+.feedname
+{   text-align: left;  
+    color: #858585;
+}
+
+.pubdate
+{  
+    text-align: right; 
+    color: #858585;
+}
+
+.feedlink
+{ 
+    text-align: right;
+}
+
+.itemtitle
+{    
+}
+
+.spacer
+{
+    height: 4px;
+}
+img#bckgrndimg
+{   z-index: -1000;
+    position: fixed;
+    display: block;
+    bottom: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+img#plus
+{   z-index: 250;
+    position: fixed;
+    display: block;
+    top: 0px;
+    right: 15px;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+img#minus
+{   z-index: 250;
+    position: fixed;
+    display: block;
+    top: 0px;
+    right: 0px;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <options flagduration="12h" keepduration="1d" ageofitem="2d" readbydate="0"
+    clicktosetreadbydate="false" clicktoremoveflag="true" hideifread="true"
+      searchcache="true" sortbydate="false" sortbyload="false"/>
+  <display windowsize ="medium" scrollrate="50" autoclick="0" scrollwidth="0" scrollheight="0"
+      fontfamily="Verdana" fontsize="9px" fontweight="normal"
+      backgroundimage=""
+      textcolor="grey" linecolor="grey" dividercolor="grey" contrast="80" lineseparator="true"
+      scrollbarcolor="lightgrey" transparency="50"
+      bordercolor="" backgroundcolor="" horizontal="false" righttoleft="false" 
+      hidehover ="true" hidescrollbar="false"/>
+  <proxy username="" password="" server=""/>
+  <feeds flushcache="false" crosscompare="false" datedisplayformat="HH:mm:ss E d NNN yyyy" folder="All">
+    <feed id="Feed10" name="msnbc.com: World news"
+          url="http://rss.msnbc.msn.com/id/3032506/device/rss/rss.xml" 
+          folder="@News" atom="false" interval="20" color="" dateformat="" 
+          enable="false" comparecontent="false" applyrules="false" displayname="false" topx="0" usefm="false" prune="false"
+          ></feed>
+    <feed id="Feed11" name="The Official Microsoft Blog – News and Perspectives from Microsoft"
+          url="http://blogs.technet.com/microsoft_blog/rss.xml"
+          folder="@Blogs" atom="false" interval="20" color="" dateformat="" 
+          enable="false" comparecontent="false" applyrules="false" displayname="false" topx="0" usefm="false" prune="false"
+          ></feed>
+    <feed id="Feed12" name="- Bing News" 
+          url="http://api.bing.com/rss.aspx?Source=News&amp;Market=en-GB&amp;Version=2.0&amp;News.Category=rt_World&amp;Query=" 
+          folder="@News" atom="false" interval="20" color="" dateformat="" 
+          enable="false" comparecontent="false" applyrules="true" displayname="false" topx="0" usefm="false" prune="false"
+          ></feed>
+    <feed name="Reuters: World News" folder="@News" atom="false"
+        id="Feed1" interval="20" topx="0" color=""
+        url = "http://mf.feeds.reuters.com/reuters/UKWorldNews"
+        dateformat =""
+        enable="true" comparecontent="false" applyrules="true" prune="true" displayname="false" usefm="false"
+            ></feed>
+    <feed name="Reuters: Technology News" folder="@Technology" atom="false"
+        id="Feed2" interval="20" topx="0" color="cyan"
+        url = "http://mf.feeds.reuters.com/reuters/technologyNews"
+        dateformat =""
+        enable="false" comparecontent="false" applyrules="true" prune="true" displayname="false" usefm="false"
+           ></feed>
+    <feed name="BBC News | News Front Page | UK Edition" folder="@News" atom="false"
+        id="Feed3" interval="20" topx="0" color="yellow"
+        url = "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml"
+        dateformat =""
+        enable="false" comparecontent="false" applyrules="true" prune="false" displayname="false" usefm="false"
+            ></feed>
+    <feed name="BBC News | Technology | UK Edition" folder="@Technology" atom="false"
+        id="Feed4" interval="20" topx="0" color="cyan"
+        url ="http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/technology/rss.xml"
+        dateformat =""
+        enable="false" comparecontent="false" applyrules="true" prune="false" displayname="false"  usefm="false"
+            ></feed>
+    <feed name="The Guardian World News" folder="@News" atom="false"
+        id="Feed5" interval="20" topx="0" color="yellow"
+        url ="http://feeds.guardian.co.uk/theguardian/rss"
+        dateformat =""
+        enable="false" comparecontent="false" applyrules="true" prune="false" displayname="false"  usefm="false"
+            ></feed>
+    <feed name="World - Google News" folder="@News" atom="false"
+          id="Feed6" interval="20" topx="0" color=""
+          url="http://news.google.com/news?pz=1&amp;cf=all&amp;ned=uk&amp;hl=en&amp;topic=w&amp;output=rss"
+          dateformat="E, d MMM y H:m:sz"
+          enable="false" comparecontent="false" applyrules="true" displayname="false" usefm="false" prune="false"
+            ></feed>
+  </feeds>
+  <pages folder="All">
+    <page  name="Check web for updates to Hermes." folder="@Admin"
+       id="Page10" interval="1w" color=""
+       url="http://hermesgadget.codeplex.com/"
+       dateformat =""
+       enable="false" comparecontent="false" applyrules="false" displayname="false"
+       ignore="true" headers="false" submatchindex="1" matchpositions="false"
+       pattern="Hermes[\s]*\([vV]*(\d\.\d\.\d\.\d)\)"
+       successtitle="Hermes update available: $$/1."
+       successdescription="A newer version of Hermes is now available from codeplex.&lt;br&gt;$$/2"
+       rejecttitle="Hermes is up-to-date."
+       rejectdescription="The current version of Hermes is ($v)."
+       failtitle="Unable to check for Hermes update."
+       faildescription="The Hermes codeplex page could not be loaded at this time."
+           >HermesVersionPageCheck</page>
+    <page name="Check web customer ratings." folder="@Admin"
+         id= "Page11" interval="1d" color=""
+         url = "http://hermesgadget.codeplex.com/"
+         dateformat =""
+         enable="false" comparecontent="true" applyrules="false" displayname="false"
+         ignore="true" headers="false" submatchindex="-1" matchpositions="false"
+         pattern='TotalRatings"\&gt;[\s]*(\w+)'
+         successtitle ="Hermes ratings: $$/1."
+         successdescription ="The latest number of customer ratings is: $$/1."
+         rejecttitle =""
+         rejectdescription =""
+         failtitle ="Unable to check ratings for Hermes."
+         faildescription ="The Hermes codeplex page could not be loaded at this time."
+            >StandardPageCheck</page>
+    <page name="Check web number of downloads." folder="@Admin"
+        id= "Page12" interval="1d" color=""
+        url = "http://hermesgadget.codeplex.com/"
+        dateformat =""
+        enable="false" comparecontent="true" applyrules="false" displayname="false"
+        ignore="true" headers="false" submatchindex="-1" matchpositions="false"
+        pattern='TotalDownloads"\&gt;[\s]*(\w+)'
+        successtitle ="Hermes downloads: $$/1."
+        successdescription ="The latest number of downloads is: $$/1."
+        rejecttitle =""
+        rejectdescription =""
+        failtitle ="Unable to check downloads of Hermes."
+        faildescription ="The Hermes codeplex page could not be loaded at this time."
+            >
+      function(f, matches) {
+      var title = null, description = null;
+      if (matches.length == 0) {
+      title = f.failTitle;
+      description = f.failDescription;
+      } else {
+      title = f.successTitle;
+      description = f.successDescription;
+      }
+      title = ReplaceMatches(f, matches, title);
+      description = ReplaceMatches(f, matches, description);
+      return new MiniItem(title, description);
+      }
+    </page>
+    <page name="Check web for changes to home page." folder="@Admin"
+        id= "Page13" interval="1d" color=""
+        url = "http://hermesgadget.codeplex.com/"
+        dateformat =""
+        enable="false" comparecontent="true" applyrules="false" displayname="false"
+        ignore="true" headers="false" submatchindex="-1" matchpositions="false"
+        pattern=""
+        successtitle ="Hermes home page has changed."
+        successdescription ="The Hermes home page has changed. Page hashcode is $#."
+        rejecttitle =""
+        rejectdescription =""
+        failtitle ="Unable to check Hermes home page."
+        faildescription ="The Hermes home page could not be loaded at this time."
+            >StandardPageCheck</page>
+  </pages>
+  <alerts folder="All" username="" password="" server="" port ="25" ssl="false"
+      fromaddress="" soundfile="C:\\Windows\\Media\\Windows Notify.wav">
+    <alert name="Alert when web update available." folder="@Admin"
+        id= "Alert10" interval="1d" color="magenta"
+        enable="false" comparecontent="true" applyrules="false" displayname="false"
+        playsound="true" showinflyout="false" email="false" ashtml="true" toaddress=""
+        patternfolder="$F"
+        patterncategories=""
+        patternname="Check web"
+        patterntitle="Hermes update"
+        patterndescription=""
+        patternlink=""
+        successtitle ="Hermes update alert."
+        successdescription ="$d"
+        >StandardAlertCheck</alert>
+    <alert name="Alert when web ratings change." folder="@Admin"
+        id= "Alert12" interval="1d" color="magenta"
+        enable="false" comparecontent="true" applyrules="false" displayname="false"
+        playsound="true" showinflyout="false" email="false" ashtml="true" toaddress=""
+        patternfolder=""
+        patterncategories="\|admin\|"
+        patternname="Check web"
+        patterntitle="Hermes ratings"
+        patterndescription=""
+        patternlink=""
+        successtitle ="Hermes ratings alert."
+        successdescription ="$d"
+        >StandardAlertCheck</alert>
+  </alerts>
+  <categories confirmdelete="true" showifnew="true" filterbycategory="true" hideifnone="false">
+    <category name="All" enable="true"/>
+    <category name="@Admin" color="red" enable="true"/>
+    <category name="@Blogs" color="lime" enable="true"/>
+    <category name="@Entertainment" color="magenta" enable="true"/>
+    <category name="@Fashion" color="orange" enable="true"/>
+    <category name="@Films" color="orange" enable="true"/>
+    <category name="@Music" color="lime" enable="true"/>
+    <category name="@News" color="grey" enable="true"/>
+    <category name="@Technology" color="cyan" enable="true"/>
+    <category name="@Sport" color="cyan" enable="true"/>
+  </categories>
+  <filters>
+    <filter name="Tech Companies">/Microsoft|Apple|Google|Intel|AMD|IBM/i</filter>
+    <filter name="Pop Stars">/Elvis Presley|Madonna|Johnny Cash/i</filter>
+  </filters>
+</data>

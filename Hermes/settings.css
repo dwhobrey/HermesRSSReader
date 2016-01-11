@@ -1,0 +1,777 @@
+
+.button
+{
+	width: 80px;
+}
+
+.setbutton
+{
+	width: 60px;
+}
+
+.smallbutton
+{
+	width: 50px;
+}
+
+.mediumbutton
+{
+	width: 70px;
+}
+
+label
+{
+	width: 70px;
+	display: block;
+	float: left;
+	margin-top: 3px;
+}
+
+input
+{
+	font-family: verdana;
+	font-size: 10px;
+	padding: 1px;
+}
+
+.displaycontrasttext
+{
+	width: 57px;
+}
+
+.feedcolor
+{
+	width: 57px;
+	border: 1px solid #dedede;
+}
+
+.datedisplay
+{
+	width: 160px;
+}
+
+.feeddateformat
+{
+	width: 186px;
+	border: 1px solid #dedede;
+}
+
+.inputtextproxy
+{
+	width: 160px;
+}
+
+.toaddress
+{
+	width: 200px;
+}
+
+.selectstyle
+{
+	font-size: 10px;
+	font-family: Verdana;
+}
+
+p
+{
+	margin: 0px 0px 4px 0px;
+	padding: 0px;
+}
+
+body
+{
+	width: 310px;
+	height: 436px;
+	margin: 0px;
+	padding: 4px;
+	font-family: verdana;
+	font-size: 10px;
+	color: black;
+	background-color: white;
+	background-image: URL(images/settingsbg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 0px 0px;
+}
+
+div#messagebox
+{
+	position: fixed;
+	z-index: 250;
+	height: 42px;
+	width: 298px;
+	bottom: 32px;
+	left: 4px;
+	padding: 0px;
+	border: 1px solid #858585;
+	overflow-y: scroll;
+	overflow-x: auto;
+	color: black;
+	background-color: white;
+}
+div#picker
+{
+	position: fixed;
+	z-index: -10001;
+	height: 1px;
+	width: 1px;
+	bottom: 0px;
+	left: 50px;
+}
+
+div#footer
+{
+	position: fixed;
+	z-index: 250;
+	width: 302px;
+	bottom: 5px;
+	left: 2px;
+	border: 0px;
+	padding: 0px;
+	text-align: right;
+}
+
+.tabcontrol
+{
+	z-index: 0;
+	margin-left: 5px;
+}
+
+.tab
+{
+	position: relative;
+	z-index: 10;
+	padding: 5px 2px 5px 2px;
+	border: 1px solid #858585;
+	float: left;
+	background-color: #eeeeee;
+	top: 1px;
+	margin-left: -1px;
+	font-size: 10px;
+}
+
+.selectedtab
+{
+	z-index: 40;
+	background-color: white;
+	border-bottom: 1px solid white;
+	top: 1px;
+}
+
+.tabcontents
+{
+	position: fixed;
+	left: 4px;
+	top: 28px;
+	z-index: 30;
+	float: left;
+	border: 1px solid #858585;
+	background-color: white;
+	padding: 5px;
+	width: 288px;
+	font-size: 10px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.tabcontentsnormal
+{
+	position: fixed;
+	left: 0px;
+	top: 24px;
+	z-index: 30;
+	float: left;
+	border: 1px solid #858585;
+	background-color: white;
+	padding: 5px;
+	width: 288px;
+	font-size: 10px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.pagetabcontrol
+{
+	position: relative;
+	z-index: 140;
+	margin-left: 5px;
+}
+
+.pagetab
+{
+	position: relative;
+	z-index: 100;
+	padding: 2px 3px;
+	border: 1px solid #858585;
+	float: left;
+	background-color: #eeeeee;
+	top: 1px;
+	margin-left: -1px;
+	font-size: 10px;
+}
+
+.pageselectedtab
+{
+	position: relative;
+	z-index: 145;
+	background-color: white;
+	border-bottom: 1px solid white;
+	top: 1px;
+}
+
+.pagetabcontents
+{	
+	position: relative;
+	z-index: 100;
+	top: 0px;
+	float: left;
+	border: 1px solid #858585;
+	background-color: white;
+	padding: 0px;
+	width: 267px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.pagetabarea
+{
+	position: relative;
+	z-index: 140;
+	width: 260px;
+	height: 40px;
+	font-size: 10px;
+	font-family: verdana;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border: 1px solid #dedede;
+}
+
+.pagename
+{
+	position: relative;
+	width: 220px;
+	height: 15px;
+	font-size: 10px;
+	font-family: verdana;
+	overflow: hidden;
+	border: 1px solid #dedede;
+}
+.pagetabareafunc
+{
+	position: relative;
+	z-index: 140;
+	width: 260px;
+	height: 110px;
+	font-size: 10px;
+	font-family: verdana;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border: 1px solid #dedede;
+}
+
+div#pagefooter
+{
+	position: relative;
+	z-index: 200;
+}
+
+div#feedlist
+{
+	width: 100%;
+	height: 222px;
+	border: 1px solid #858585;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: white;
+	color: black;
+	--color: #252525;
+}
+
+div#pagelist
+{
+	position: relative;
+	z-index: 90;
+	width: 100%;
+	height: 219px;
+	border: 1px solid #858585;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: white;
+	color: black;
+	--color: #252525;
+}
+
+div#alertlist
+{
+	position: relative;
+	z-index: 90;
+	width: 100%;
+	height: 158px;
+	border: 1px solid #858585;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: white;
+	color: #252525;
+}
+
+div#catlist
+{
+	position: relative;
+	z-index: 90;
+	width: 100%;
+	height: 223px;
+	border: 1px solid #858585;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: white;
+	color: #252525;
+}
+div#filterlist
+{
+	position: relative;
+	z-index: 90;
+	width: 100%;
+	height: 251px;
+	border: 1px solid #858585;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: white;
+	color: #252525;
+}
+
+.textfield
+{
+	width: 220px;
+}
+.textnamefield
+{ width: 170px;
+}
+
+.feedtable
+{
+	width: 100%;
+	background-color: white;
+	padding: 0px;
+	font-family: verdana;
+	font-size: 10px;
+	border-collapse: collapse;
+}
+
+.feedtablealt
+{
+	width: 100%;
+	background-color: #eeeeee;
+	padding: 0px;
+	font-family: verdana;
+	font-size: 10px;
+	border-collapse: collapse;
+}
+
+.feedrow
+{
+}
+
+.pagefeedtable
+{
+	width: 100%;
+	background-color: white;
+	padding: 0px;
+	font-family: verdana;
+	font-size: 10px;
+	border-collapse: collapse;
+}
+
+.pagefeedtablealt
+{
+	width: 100%;
+	background-color: #eeeeee;
+	padding: 0px;
+	font-family: verdana;
+	font-size: 10px;
+	border-collapse: collapse;
+}
+
+.pagerow
+{
+}
+
+.pagedelete
+{
+	text-decoration: underline;
+	color: black;
+	cursor: pointer;
+}
+
+.delete
+{
+	text-decoration: underline;
+	color: black;
+	cursor: pointer;
+}
+
+.interval
+{
+	width: 30px;
+	border: 1px solid #dedede;
+}
+
+.submatchindex
+{
+	width: 20px;
+	border: 1px solid #dedede;
+}
+
+.pageurl
+{
+	width: 230px;
+	border: 1px solid #dedede;
+}
+
+.pattern
+{
+	width: 215px;
+	border: 1px solid #dedede;
+}
+
+.topx
+{
+	width: 30px;
+	border: 1px solid #dedede;
+}
+
+.popupbox
+{
+	z-index: 10000;
+	position: absolute;
+	top: 24px;
+	left: 0px;
+	padding: 0px;
+	border: 0px;
+	width: 100%;
+	height: 302px;
+	background-color: #eeeeee;
+	clear: both;
+	display: none;
+	overflow: hidden;
+}
+.popuptable
+{
+	z-index: 10001;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 80%;
+	padding: 4px;
+	font-family: verdana;
+	font-size: 10px;
+	border-collapse: collapse;
+}
+
+table#catdeletetable
+{
+	z-index: 10001;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 80%;
+	background-color: #404040;
+	color: White;
+	padding: 4px;
+	border: 2px solid #dedede;
+}
+
+.importexporttext
+{
+	position: relative;
+	z-index: 250;
+	height: 20px;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: auto;
+	background-color: white;
+	color: black;
+	padding: 0px;
+	border: 1px solid black;
+}
+
+td#previewtablecell
+{
+	background-color: black;
+	padding: 2px;
+	border-collapse: collapse;
+}
+
+div#previewbox
+{
+	background-color: black;
+	padding: 2px;
+	clear: both;
+	border: 2px 10px 2px 2px solid #dedede;
+	height: 24px;
+}
+
+.alerttabcontrol
+{
+	position: relative;
+	z-index: 140;
+	margin-left: 5px;
+}
+
+.alerttab
+{
+	position: relative;
+	z-index: 100;
+	padding: 2px 3px;
+	border: 1px solid #858585;
+	float: left;
+	background-color: #eeeeee;
+	top: 1px;
+	margin-left: -1px;
+	font-size: 10px;
+}
+
+.alertselectedtab
+{
+	position: relative;
+	z-index: 145;
+	background-color: white;
+	border-bottom: 1px solid white;
+	top: 1px;
+}
+
+.alerttabcontents
+{
+	position: relative;
+	z-index: 100;
+	top: 0px;
+	float: left;
+	border: 1px solid #858585;
+	background-color: white;
+	padding: 0px;
+	width: 267px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.alerttabarea
+{
+	position: relative;
+	z-index: 140;
+	width: 260px;
+	height: 40px;
+	font-size: 10px;
+	font-family: verdana;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border: 1px solid #dedede;
+}
+
+.alerttabareaname
+{
+	position: relative;
+	z-index: 140;
+	width: 260px;
+	height: 15px;
+	font-size: 10px;
+	font-family: verdana;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border: 1px solid #dedede;
+}
+.alerttabareafunc
+{
+	position: relative;
+	z-index: 140;
+	width: 260px;
+	height: 110px;
+	font-size: 10px;
+	font-family: verdana;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border: 1px solid #dedede;
+}
+
+div#alertfooter
+{
+	position: relative;
+	z-index: 200;
+}
+
+.alertfeedtable
+{
+	width: 100%;
+	background-color: white;
+	padding: 0px;
+	font-family: verdana;
+	font-size: 10px;
+	border-collapse: collapse;
+}
+
+.alertfeedtablealt
+{
+	width: 100%;
+	background-color: #eeeeee;
+	padding: 0px;
+	font-family: verdana;
+	font-size: 10px;
+	border-collapse: collapse;
+}
+
+.alertrow
+{
+}
+
+.alertdelete
+{
+	text-decoration: underline;
+	color: black;
+	cursor: pointer;
+}
+
+.alertname
+{
+	width: 200px;
+	height: 30px;
+	font-size: 10px;
+	font-family: verdana;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border: 1px solid #dedede;
+}
+
+.filterdrops
+{
+	color: black;
+	background-color: White;
+	font-size: 10px;
+}
+
+.catdrops
+{
+	color: black;
+	background-color: White;
+	font-size: 10px;
+}
+
+div#catfooter
+{
+	position: relative;
+	z-index: 200;
+}
+
+.catfeedtable
+{
+	width: 270px;
+	background-color: white;
+	padding: 0px;
+	font-family: verdana;
+	font-size: 10px;
+	border-collapse: collapse;
+}
+
+.catfeedtablealt
+{
+	width: 270px;
+	background-color: #eeeeee;
+	padding: 0px;
+	font-family: verdana;
+	font-size: 10px;
+	border-collapse: collapse;
+}
+
+.catrow
+{
+	text-align: left;
+}
+
+.catdelete
+{
+	text-decoration: underline;
+	color: black;
+	cursor: pointer;
+}
+
+.catname
+{
+	width: 200px;
+	height: 30px;
+	font-size: 10px;
+	font-family: verdana;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	border: 1px solid #dedede;
+}
+
+.catfilters
+{
+}
+
+div#filterfooter
+{
+	position: relative;
+	z-index: 200;
+}
+
+.filterfeedtable
+{
+	width: 270px;
+	background-color: white;
+	padding: 0px;
+	font-family: verdana;
+	font-size: 10px;
+	border-collapse: collapse;
+}
+
+.filterfeedtablealt
+{
+	width: 270px;
+	background-color: #eeeeee;
+	padding: 0px;
+	font-family: verdana;
+	font-size: 10px;
+	border-collapse: collapse;
+}
+
+.rowselected
+{
+}
+
+.rowcontents
+{
+}
+.rowtable
+{
+	width: 100%;
+	background-color: white;
+	padding: 0px;
+	font-family: verdana;
+	font-size: 10px;
+	border-collapse: collapse;
+}
+
+.filtertextarea
+{
+	position: relative;
+	z-index: 140;
+	width: 260px;
+	height: 100px;
+	font-size: 10px;
+	font-family: verdana;
+	overflow-y: auto;
+	overflow-x: hidden;
+	border: 1px solid #dedede;
+}
+
+.filterrow
+{
+	text-align: left;
+}
+
+.filterdelete
+{
+	text-decoration: underline;
+	color: black;
+	cursor: pointer;
+}

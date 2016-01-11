@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AD17AE86-5DBB-404B-8AE9-E4EEC87C0AFE}"
+	ProjectSection(SolutionItems) = preProject
+		Hermes\about.html = Hermes\about.html
+		Hermes\cache.xml = Hermes\cache.xml
+		Hermes\changes.txt = Hermes\changes.txt
+		Hermes\date.js = Hermes\date.js
+		Hermes\defaultsettings.xml = Hermes\defaultsettings.xml
+		Hermes\details.css = Hermes\details.css
+		Hermes\details.html = Hermes\details.html
+		Hermes\details.js = Hermes\details.js
+		Hermes\gadget.xml = Hermes\gadget.xml
+		Hermes\jscolor.js = Hermes\jscolor.js
+		Hermes\main.css = Hermes\main.css
+		Hermes\main.html = Hermes\main.html
+		Hermes\main.js = Hermes\main.js
+		Hermes\manual.html = Hermes\manual.html
+		Hermes\readme.txt = Hermes\readme.txt
+		Hermes\rgbcolor.js = Hermes\rgbcolor.js
+		Hermes\scroller.js = Hermes\scroller.js
+		Hermes\search.css = Hermes\search.css
+		Hermes\search.html = Hermes\search.html
+		Hermes\search.js = Hermes\search.js
+		Hermes\selectbox.css = Hermes\selectbox.css
+		Hermes\selectbox.js = Hermes\selectbox.js
+		Hermes\settings.css = Hermes\settings.css
+		Hermes\settings.html = Hermes\settings.html
+		Hermes\settings.js = Hermes\settings.js
+		Hermes\utils.js = Hermes\utils.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{693C892E-A1FC-4CD1-B667-A180D5A8A212}"
+	ProjectSection(SolutionItems) = preProject
+		Hermes\images\arrow.gif = Hermes\images\arrow.gif
+		Hermes\images\background.png = Hermes\images\background.png
+		Hermes\images\background130.png = Hermes\images\background130.png
+		Hermes\images\background197.png = Hermes\images\background197.png
+		Hermes\images\background260.png = Hermes\images\background260.png
+		Hermes\images\bigwindowicon.gif = Hermes\images\bigwindowicon.gif
+		Hermes\images\cross.gif = Hermes\images\cross.gif
+		Hermes\images\hearticon.gif = Hermes\images\hearticon.gif
+		Hermes\images\hermes.jpg = Hermes\images\hermes.jpg
+		Hermes\images\hs.png = Hermes\images\hs.png
+		Hermes\images\hv.png = Hermes\images\hv.png
+		Hermes\images\infoicon.gif = Hermes\images\infoicon.gif
+		Hermes\images\mediumwindowicon.gif = Hermes\images\mediumwindowicon.gif
+		Hermes\images\minus.gif = Hermes\images\minus.gif
+		Hermes\images\plus.gif = Hermes\images\plus.gif
+		Hermes\images\reloadicon.gif = Hermes\images\reloadicon.gif
+		Hermes\images\rssicon.gif = Hermes\images\rssicon.gif
+		Hermes\images\rssicon_large.gif = Hermes\images\rssicon_large.gif
+		Hermes\images\rssicon_small.gif = Hermes\images\rssicon_small.gif
+		Hermes\images\searchicon.gif = Hermes\images\searchicon.gif
+		Hermes\images\searchicon_small.gif = Hermes\images\searchicon_small.gif
+		Hermes\images\select_arrow.gif = Hermes\images\select_arrow.gif
+		Hermes\images\select_arrow_down.gif = Hermes\images\select_arrow_down.gif
+		Hermes\images\select_arrow_over.gif = Hermes\images\select_arrow_over.gif
+		Hermes\images\smallwindowicon.gif = Hermes\images\smallwindowicon.gif
+		Hermes\images\transparent.png = Hermes\images\transparent.png
+		Hermes\images\wrenchicon.gif = Hermes\images\wrenchicon.gif
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{693C892E-A1FC-4CD1-B667-A180D5A8A212} = {AD17AE86-5DBB-404B-8AE9-E4EEC87C0AFE}
+	EndGlobalSection
+EndGlobal

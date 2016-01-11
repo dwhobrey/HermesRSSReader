@@ -1,0 +1,586 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0016)http://localhost -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hermes Manual (v2.3.0.6)</title>
+    <style type="text/css">
+        body
+        {
+            background-color: white;
+            color: black;
+            font-family: verdana;
+            font-size: 12px;
+            margin: 0px;
+            padding: 15px;
+        }
+        h1, h2, h3, h4
+        {
+            margin: 8px 0px 4px 0px;
+            padding: 0px;
+            color: black;
+        }
+        a
+        {  
+            color: red;
+            text-decoration: none;
+        }
+        .toggle 
+        {
+        	font-family: verdana;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.0;
+            margin: 8px 0px 4px 0px;
+            padding: 0px;
+            color: black;
+        }
+    </style>
+<script language="javascript" type="text/javascript">
+function toggle(id) {
+	var d = document.getElementById(id);
+	if(d.style.display == "block") {
+    	d.style.display = "none";
+  	} else {
+		d.style.display = "block";
+	}
+} 
+</script>
+</head>
+<body>    
+    <h1>
+        Hermes Manual</h1>
+        <p>Click on the headings below for further details:</p>
+<a class="toggle" href="javascript:toggle('overview');">Overview</a><br />
+<div id="overview" style="display: none">
+    Hermes can be used to read RSS/RDF feeds, some Atom feeds, monitor website pages, 
+    and raise alerts when one of
+    these sources produces text containing words or phrases of interest.<br /><br />
+    
+    An RSS feed is essentially an xml web page that is regularly updated by the owner.
+    The content of the page is a list of news items. Standard RSS news items consist of
+    a title, description, link, publication date, and sometimes category information.
+    The Microsoft Feeds Manager (FM) that comes with Windows is able to read RSS feeds in
+    non-standard formats too, and when necessary an option can be set in Hermes
+    so that FM is used to load a feed.<br /><br />
+    
+    Hermes' scrolling mechanism works by moving an item from the top of the list and then
+    placing it on the bottom. You'll see this happending if you move the scroll bar to the 
+    bottom of the page.<br />
+    <br />
+</div>
+    
+<a class="toggle" href="javascript:toggle('categories');">Categories &amp; Folders</a><br />
+<div id="categories" style="display: none">
+    Feeds, pages, alerts, and items, may include the names of categories they belong to. 
+    The categories assigned to feeds are treated slightly differently to items as follows.
+    The category of a feed is treated as a folder and used for grouping feeds belonging to the same
+    category. The category assigned to the feed by the RSS provider is ignored in preference to
+    that given to it within Hermes when the feed is added. An item's category information is
+    treated as taxonic data and read from the feed itself. Both kinds of categories are managed
+    via the Cats tab. To distinguish between them, feed 'folder' categories are prefixed by
+    the '@' character.<br /> 
+    
+    <b>Filter:</b> When checked, items are filtered by category,
+     i.e. items pass if they belong to one of the enabled categories. 
+     Note that category matching is not case-sensitive.<br />
+    <b>Show if new:</b> If an item belongs to a category not in the list it will pass the filter.<br />
+    <b>Hide if none:</b> If an item does not contain any category information it will not pass the filter.<br />
+    <b>[add category]:</b> Pressing this button will add a new item category. <br />
+    <b>[add folder]:</b> Pressing this button will add a new folder for feeds, pages and alerts. 
+      Folder names are prefixed by an '@' character to distinguish them from item categories.
+      Note that the unprefixed name is also used as the default category for items without any
+      category information. For example, if an uncategorised item is read in from a feed belonging
+      to the folder "@Music", the item will be assigned to the "Music" category.<br /> 
+    <b>[rename]:</b> Pressing this button will rename the selected category to the category
+    name given in the text input box. Note that specifying an existing folder name will
+    merge the selected folder with the specified one - changing its name in the process
+    too.<br />
+    
+    <h3>Category &amp; folder options</h3>
+    <b>[Left-hand checkbox]:</b> Activates or deactivates the category/folder.<br />
+    For folders, when disabled, all feeds, pages
+    and alerts belonging to this folder will be disabled too - overriding their individual
+    enable setting. When enabled, only those feeds, pages or alerts belonging to this
+    folder, that are individually enabled, will be enabled.<br />
+    For items, depending on the "Filter" flag, when checked, only those that are members of this
+    category will pass the filter.<br />
+    <b>[X]:</b> Removes the category/folder. Note that for folders, this will also remove all feeds, pages
+    and alerts belonging to the folder.<br />
+    <b>Text color:</b> The default color for feeds belonging to this folder unless
+    overridden by individual feed, page or alert color setting. When unset, the default
+    color from the Display tab is used.<br />
+    <b>Include filter:</b> When a filter is selected,
+    only items that match the filter will be shown.<br />
+    <b>Exclude filter:</b> When a filter is selected,
+    only items that do not match the filter will be shown.<br />
+    Filters are defined on the Cats page. Note that items not shown due to filtering can still be searched.<br />
+    </br>
+</div>
+ 
+<a class="toggle" href="javascript:toggle('feeds');">Feeds</a><br />
+<div id="feeds" style="display: none">       
+    <b>Adding a new feed:</b> On the Feeds tab a new RSS/Atom feed is set up by 
+    pressing the &quot;add feed&quot; button and entering
+    a http url, such as:<br />
+    http://mf.feeds.reuters.com/reuters/UKWorldNews,<br />
+    http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml.<br />
+    Pressing the "OK" button on the add feed page will then test that the feed works and create a new
+    feed entry, otherwise an error message is displayed. For non-standard feed formats
+    try using FeedsManager by ticking the relevant FM boxes. The feed may need to be 
+    added to FM first. Remember to select a folder first - or create a new folder if necessary.<br />
+    An 'access is denied' error is sometimes produced when the IE security level has disabled
+    data access across domains. To fix, navigate to the Miscellaneous section under the
+    IE security options tab: "Internet Options/Security/Custom Level.../Miscellaneous/".
+    Then enable "Access data sources across domains".
+    Restart sidebar for option change to take effect.<br />
+    
+    <b>Date display format:</b> When set, dates are displayed in this format, otherwise they are left in their original format.
+    See below for format specifiers, default is "HH:mm:ss E d NNN yyyy".<br />
+    <b>Flush cache:</b> When checked, the item read status cache will be flushed before reloading
+    feed items when the new options are saved. 
+    The cache is automatically saved and loaded during shutdown and startup.<br />
+    <b>Cross Compare:</b> When checked, any duplicated items across the feeds are hidden.
+    <br />
+    <b>[toggle]:</b> This will toggle all the checkboxes of the same kind as the last
+    checkbox selected.<br />
+    <b>[FM import] &amp; [FM export]:</b> Pressing these buttons reads or writes
+    the feed list from Windows FeedsManager, which can be accessed via IE or Outlook.
+    Duplicate feeds are ignored. Folders for new folder names are created automatically
+    in a disabled state - so you'll need to enable them via the Cats tab before you can see them.
+    The feeds from the root FM folder are assigned to the folder '@Imported'.
+    <br />
+    
+    <h3>Feed options</h3>
+    <b>[Left-hand checkbox]:</b> When checked, the feed items are displayed in the scroll window.<br />
+    <b>Apply rules:</b> When checked, the common item rules are used to determine whether to
+    display items of the feed.<br />
+    <b>Show name:</b> When checked, the feed name is displayed in the scroll window along
+    with the item title. Names are not displayed while in horizontal mode.<br />
+    <b>Use FM:</b> When checked, the FeedsManager is used to fetch feed items. Note this
+    uses far more memory and currently results in a growing memory leak.<br />
+    <b>Compare content:</b> When checked, items are tested for equality based on item title and
+    description, otherwise just their title is used.<br />
+    <b>Prune duplicates:</b> Removes duplicate items from a feed.<br />
+    <b>Color:</b> Overrides the folder color and the default color.<br />
+    <b>Interval:</b> A feed is polled for new items every "update interval" minutes.
+    During feed updates, old items are removed if they do not appear in the new updates,
+    while an old item's read state is preserved if it does.<br />
+    <b>Top X:</b> When set to a non-zero number, no more than that many items will be read
+    from the feed.<br />
+    <b>Date format:</b> Most news items have a text field that specifies its publication date.
+    If the date can be converted into the required internal format it will be used to set the item's
+    true publication date, otherwise the time the item was loaded is used.
+    To determine if an item's date was converted correctly,
+    click on the item and inspect the date shown in the top right corner of the flyout
+    window. If this starts with a '?' it means the date couldn't be parsed. This will affect
+    how the expiration rules are applied to it.<br /> 
+    When the item date format is non standard, you can specify it's
+    format using the syntax below:<br />
+    <table>
+    <tr><td>Field</td><td>Full Form</td><td>Short Form</td></tr>
+<tr><td>Year         </td><td> yyyy (4 digits)    </td><td> yy (2 digits), y (2 or 4 digits)</td></tr>
+<tr><td>Month        </td><td> MMM (name or abbr.) </td><td> MM (2 digits), M (1 or 2 digits)</td></tr>
+<tr><td>             </td><td> NNN (abbr.)        </td><td></td></tr>
+<tr><td>Day of Month </td><td> dd (2 digits)      </td><td> d (1 or 2 digits)</td></tr>
+<tr><td>Day of Week  </td><td> EE (name)          </td><td> E (abbr)</td></tr>
+<tr><td>Hour (1-12)  </td><td> hh (2 digits)      </td><td> h (1 or 2 digits)</td></tr>
+<tr><td>Hour (0-23)  </td><td> HH (2 digits)      </td><td> H (1 or 2 digits)</td></tr>
+<tr><td>Hour (0-11)  </td><td> KK (2 digits)      </td><td> K (1 or 2 digits)</td></tr>
+<tr><td>Hour (1-24)  </td><td> kk (2 digits)      </td><td> k (1 or 2 digits)</td></tr>
+<tr><td>Minute       </td><td> mm (2 digits)      </td><td> m (1 or 2 digits)</td></tr>
+<tr><td>Second       </td><td> ss (2 digits)      </td><td> s (1 or 2 digits)</td></tr>
+<tr><td>Fraction  </td><td> f (up to 3 digits)      </td><td>parses [.][1, 2 or 3 digits]</td></tr>
+<tr><td>AM/PM        </td><td> a                  </td><td></td></tr>
+<tr><td>Zone</td><td>z</td><td>postfix, parses [zone][[+|-]hh[:][mm]]</td></tr>
+<tr><td>Adjust</td><td>#[+|-]hh[:][mm]</td><td>postfix, offset added to time.</td></tr>
+    </table>  
+Note the difference between MM and mm: Month=MM, not mm!<br />
+Examples: <br />
+ "MMM d, y" matches: "January 01, 2000", "Dec 1, 1900", "Nov 20, 00".<br />
+ "M/d/yy"   matches: "01/20/00", "9/2/00". <br />
+ "MMM dd, yyyy hh:mm:ssa" matches: "January 01, 2000 12:30:45AM".<br />
+ "y-M-dTHH:m:sfz" matches "2011-09-06T00:01:35.123 GMT-07:00".<br />
+ This is a good format to use for Atom feeds and some RDF/RSS feeds.<br />
+ "y-M-dTHH:m:sfz#-02:00"<br />
+ As above, but also subtracts 2 hours from final time.<br />
+ "#-02:00"<br />
+ Subtracts 2 hours from time using default format.<br /><br />
+
+    <br />
+    <b>Units:</b> Inputs requiring a time value in minutes can be post-fixed with an
+    alternate unit indicator: h=hours, d=days, w=weeks, m=months, y=years.<br />
+    </br>
+ </div>
+ 
+<a class="toggle" href="javascript:toggle('filters');">Filters</a><br />
+<div id="filters" style="display: none">  
+     Feed items can be filtered based on their content. To achieve this an include and an exclude filter can
+     be specified on the Cats page for the folder that a feed belongs to. A filter is defined via a Javascript
+     regular expression on the Filters page. A common form of regular expression is 
+    a list of words separated by &#39;pipe&#39; characters, and surrounded by a pair of 
+    forward slash characters, for example: &quot;/The|quick|brown fox|/i&quot;. Notice the 
+    trailing &#39;i&#39; flag, which means ignore the case of the letters. 
+     The quotes are not needed when entering expressions. This particular expression 
+    will match any text that contains any one of these words: &#39;the&#39;, &#39;quick&#39;, or the 
+    phrase &#39;brown fox&#39;, regardless of their case.<br />
+    </br>
+ </div>
+ 
+ <a class="toggle" href="javascript:toggle('options');">Options</a><br />
+<div id="options" style="display: none">        
+    <h3>
+        Item rules</h3>
+    The following rules can be applied to an item when it is first loaded and subsequently
+    while it is scrolling.<br/><br/>
+
+    <b>New flag duration:</b> New items are marked on the left by an RSS symbol.
+    This rule removes the symbol when the item has been scrolling for the specified
+    number of minutes. If zero, no mark is shown.<br />
+    <br />
+    <b>Keep duration:</b> This rule removes the item when it has been scrolling
+    for longer than the specified number of minutes.<br />
+    <br />
+    <b>Age of item since pub date:</b> This rule removes the item when it's publication
+    date age (i.e. the difference between the current time and pub date) exceeds the
+    specified number of minutes.<br />
+    <br />
+    <b>Read by date:</b> This rule removes the item when
+    it's publication date falls before the read by date. When left blank the date/time used
+    is that at the point when the new options are saved. One of the valid date formats
+    is: MM-DD-YYYY HH:MM:SS ZZZ, where ZZZ is the optional zone, and HH is for a 24
+    hour clock.<br />
+    <h3>
+        Flags</h3>
+    <b>Clicking item sets read by date to pub date.</b> When checked, the read by date is set to
+    the item's publication date if it is more recent than the current read by date.<br />
+    <br />
+    <b>Clicking item removes new flag.</b> That is, the item's RSS symbol is removed.<br />
+    <br />
+    <b>Hide item once read.</b> After an item has been selected and read, it is removed.<br />
+    <br />
+    <b>Allow searching cache of read items.</b> When set, after reading an item's details are kept
+    enabling both read and unread items to be searched in the Search flyout.
+    Otherwise, just the item's hash code is kept and used to track it's read status.<br />
+    <br />
+    <b>Sort scroll list by pub (load) date.</b> Items from all feeds are displayed in
+    the scroll list by age (or load) order with the youngest first. Note: if the publication
+    date was not parsible then the load date is used.<br />
+    <br/>
+    <h3>
+        Importing &amp; exporting</h3>
+    The "import", "merge" and "export" buttons load or save all the settings to an xml file.
+    Note that importing clears out the old settings first, while merging overwrites
+    current feeds with the same id as an imported entry.
+    The "restore" button returns all settings to the default ones at installation time.<br />
+    </br>
+    </div>
+    
+    <a class="toggle" href="javascript:toggle('display');">Display</a><br />
+<div id="display" style="display: none"> 
+    <h3>Font</h3>
+    <b>Family:</b> Either select the font from the dropdown list, or type in the name of the 
+    required font - which must be pre-installed to work.<br />
+    <h3>Colors</h3>
+    Color values can be entered in the form of a standard color name, or via a hex hash value
+    (#RRGGBB), or via the color picker.<br />
+    <br /> 
+    When scrolling vertically and the "Border" and "Background" color input boxes are left blank,
+    or set to "white" and "black" respectively, the scroll gadget will have the classic
+    theme, i.e. rounded corners. Otherwise it has a simplified theme, i.e. square corners.
+    To force the simplified theme in black and white, capitalize the color names: "Black",
+    "White".<br />
+    <h3>Image</h3>
+    Specify the URL for a background image, or leave blank to use default. Image dimensions
+    should match those of the scroll window, such as 130w by 200h, otherwise there will be
+    a performance hit as the html rendering engine dynamically converts image size, e.g.
+    scrolling will become very slow.
+    <br />    
+    <h3>Scroll window layout</h3>
+    Items are automatically scrolled by removing the top item and appending it to the
+    bottom of the item list. Use the scroll-bar to view other items in the feeds that
+    are currently not displayed. The item rules (see above) are applied prior to scrolling
+    the item.<br />
+    <b>Scroll horizontally:</b> When checked, items are scrolled horizontally in the
+    form of a ticker-tape, otherwise they are scrolled vertically. <br />
+    <b>Hide hover / scroll bar:</b> When checked, prevents the item title-url hover or scroll bar from appearing.<br />
+    <b>Auto click:</b> The number of seconds to wait before automatically clicking on an item when hovering. 
+    Set to zero to disable. WARNING: this functionality is currently a little temperamental!<br />
+    <b>Right to left:</b> This is a first attempt at supporting languages with a
+    right to left reading direction.
+    When set, news item text is displayed right to left via the html 'dir="rtl"' property.
+    The direction of horizontal scrolling is then left to right too.
+    Note the width of the scroll bar is not set when horizontal scrolling and rtl.<br />
+    <b>Separate items with a line.</b> A visual aid to separating items.<br />
+    <b>Scroll rate:</b> The time between scroll increments. The default is 50 (milliseconds).
+    If zero, items are tested every minute without scrolling. Scrolling stops automatically
+    when the window is not full.<br />
+    <b>Height:</b> The height of the scroll window in pixels. 
+        Set to zero to return to standard sizes.<br />
+    <b>Width:</b> The width of the scroll window in pixels.
+        Set to zero to return to standard sizes.<br />
+        </br>
+</div>
+
+<a class="toggle" href="javascript:toggle('mouse');">Mouse Buttons and Wheel</a><br />
+<div id="mouse" style="display: none">  
+    For the mouse wheel to function, the gadget must be selected, either by clicking on
+    the gadget or in the scrollbar area. <br />
+    <b>Left single-clicking:</b> Clicking left mouse button over item produces a flyout
+    with further details.<br />
+    <b>Left double-clicking:</b> Double-clicking (slowly!) goes directly to link.<br />
+    <b>Ctrl-key + Left-mouse:</b> Holding a Ctrl-Key down, while then clicking left
+    mouse button, deletes the item.
+    <br />
+    <b>Ctrl-key + Alt-left + Left-mouse:</b> Deletes all items.<br />
+    <b>Ctrl-key + Alt-right + Left-mouse:</b> Deletes feed items.<br />
+    <b>Shift-key + Left-mouse:</b> Holding a Shift-Key down, while then clicking left
+    mouse button, removes the RSS symbol.<br />
+    <b>Shift-key + Alt-left + Left-mouse:</b> Removes all RSS symbols.<br />
+    <b>Shift-key + Alt-right + Left-mouse:</b> Removes feed RSS symbols.<br />
+    Tip: once you have settled on your choice of feeds and options,
+    start by deleting all items, then the new items will stand out as they appear.<br />
+    </br>
+ </div>
+ 
+ <a class="toggle" href="javascript:toggle('search');">Searching &amp; Keyword Highlighting</a><br />
+<div id="search" style="display: none">  
+    Pressing the magnifying-glass icon on the menu bar opens the keyword search page.
+    The current items, both read and unread, can be searched by entering
+    a comma separated list of keywords. This list of keywords can be saved and used
+    to mark matching items as they scroll. Searching with no keywords will return all
+    the current items. Note: searching is not case-sensitive.<br />
+    The search can be narrowed by selecting a specific feed folder category or item
+    categories. Clicking the "sort" checkbox sorts the results by publication date.<br />
+    </br>
+    </div>
+   
+ 
+  <a class="toggle" href="javascript:toggle('advanced');">Advanced Functions</a><br />
+<div id="advanced" style="display: none">     
+    The following functionality requires some knowledge of regular expressions as they are
+    used to detect phrases and other patterns in website content. So, if you
+    are unfamiliar with "Reg Exp's" please search on "javascript regular expressions"
+    for background information. Some basic examples are also included in the default
+    options.
+    
+    <h2>
+        Page Monitoring</h2>
+    Website pages can be monitored for changes in a similar manner to an RSS feed. The
+    Pages tab allows a new page feed to be set up. The strategy for monitoring a page
+    is to download the page at intervals, like an RSS feed. Then the page is examined
+    for changes using regular expressions, the hashcode of its content, or by examining
+    its header timestamp as an indication of its publication date. Based on this a report
+    is produced that acts as the description in a new news item about changes to the
+    page. The normal item rules are then applied during scrolling. Standard javascript
+    regular expressions (please consult web for syntax) can be used to examine a page's
+    content for specific changes. Using subexpressions it is possible to look for multiple
+    patterns on a page. Consequently, in some cases, when a page is examined a number
+    of matches may be found depending on the regular expression and page content. Three
+    kinds of news items can be generated:<br />
+    <b>success</b>, when a desired match is found;<br />
+    <b>reject</b>, when a match is found but it does not satisfy some further criteria;<br />
+    <b>fail</b>, when no matches are found - possibly because the page couldn't be loaded.<br />
+    For each kind of news item a title and description can be specified. These text
+    strings can contain special variables that are substituted for the specified match
+    subexpressions or a few inbuilt values such as the current Hermes version, see below
+    for their syntax. Finally, the criteria used to determine which kind of news item
+    to produce is encapsulated in a function - see <b>func</b> below.
+    In most cases one of the inbuilt page checking functions can be used,
+    otherwise an anonymous javascript function must be supplied - which is either good or bad
+    depending on how technical you are.
+    <h3>
+        Page options</h3>
+    <b>Sort submatch index:</b> When non-negative the matches are sorted alphabetically
+    based on the subexpression with the specified index. If the index is out of range
+    then zero is used.<br />
+    <b>Ignore:</b> When checked, if no matches occur a news item will not be created,
+    otherwise a fail news item is created.<br />
+    <b>Positions:</b> When checked, the character index of the match string in the page
+    are post-fixed to the match string returned by the substitution variables.<br />
+    <b>Timestamp:</b> When checked, the page's header date is used as the publication date,
+    otherwise the date and time it was created is used.<br />
+    <h3>
+        pattern</h3>
+    This is a javascript compliant regular expression. Two forms are allowed:<br />
+    <b><i>regular expression</i></b> A standard regular expression when no flags are
+    required.<br />
+    <b>/<i>regular expression</i>/flags</b> The form when flags are required, such as
+    "g", "m" or "i".<br />
+    The "test on url" and "test on text" buttons can be used to test the matches returned
+    by the pattern when applied to either the page located via the url, or the test
+    text that is entered in the input text box. The results, or any problems, are displayed in
+    the message box at the bottom of the dialog.
+    <h3>
+        func</h3>
+    This specifies the javascript function that applies the criteria to determine the
+    kind of news item to create, i.e. success, reject, or fail. Either the name of an
+    inbuilt function can be given or an anonymous function. The inbuilt functions are:<br />
+    <b>HermesVersionPageCheck</b> This tests the version number. Note, to work properly,
+    the page settings, e.g. pattern, must be as set in the example page that comes with
+    Hermes.<br />
+    <b>StandardPageCheck</b> This simply tests if there were any matches, if so it generates
+    a success news item, otherwise a fail news item. Variable substitution is applied
+    prior to creating the item.<br />
+    <b>Anonymous functions</b> The syntax for anonymous functions is:<br />
+    "funcion(f,matches) { ... }",<br />
+    but without the quotes.<br />
+    Parameter <i>f</i> is the feed object, which contains the success, reject, and fail
+    strings, e.g. successTitle, successDescription, etc., plus the content of the loaded
+    page.<br />
+    Parameter <i>matches</i> is an array of the results arrays returned by the javascript
+    RegExp exec method for each match found when the global flag is specified.<br />
+    To learn more about the parameters you'll need to unzip the Hermes gadget file and inspect
+    "main.js" - apologies for not documenting these in this help page.
+    
+    <h3>Variable substitution</h3> 
+    The Hermes javascript function "ReplaceMatches(f,matches,str,
+    item, a)" returns the string formed by replacing variables in the string <i>str</i>
+    by either a match value or inbuilt value depending on the variable name. The syntax
+    of the substitution variables is:<br />
+    '$' { <i>match_index</i> | '^' | '$' | '*' | '#' | <i>letter</i> } [ '/' <i>subexpression_index</i>
+    ],<br />
+    where <i>match_index</i> is the index of the match to use, e.g. on a page, when
+    the global flag is specified, a number of matches may be found. The match index
+    refers to the order in which they were found, unless a non-negative sort submatch
+    index was specified, then the index refers to their alphabetical order. The <i>subexpression_index</i>
+    is the index of the subexpression in the regular expression to use. So, "$0/1" would
+    refer to the second subexpression of the first match.<br />
+    "$^" refers to the first match index, i.e. it's the same as giving a match index
+    of zero.<br />
+    "$$" refers to the last match index.<br />
+    "$*" selects all the matches.<br />
+    "$#" returns the hashcode for the page. The hashcode value changes if the page content
+    changes and so is a quick way of checking for changes. It is used in the successDescription
+    string as a compact way of tracking page content changes - since a hash of the description is used
+    to track changes to a news item itself. Hence a change in the hashcode in the description results in
+    a change in the hashcode for the news item.<br />
+    The <i>letter</i> qualified variables are as follows:<br />
+    "$c" the item categories. These are in the form of a lowercase list separated by "|".<br />
+    "$d" the item description.<br />
+    "$f" the feed folder category.<br />
+    "$h" the item hash code.<br />
+    "$l" the item link.<br />
+    "$n" the feed name.<br />
+    "$p" the item publication date.<br />
+    "$t" the item title.<br />
+    "$v" the version number of the gadget.<br />
+    "$F" the alert folder category. (* see below)<br />
+    "$N" the alert name. (* see below)<br />
+    <p>* When used as a pattern in an alert (see below), "$F" and "$N" can also be used in place of a
+    regular expression for matching the news item's feed folder and name with that of the alert.</p>
+    <p>
+        For examples on how to use substitution variables and functions, see the pre-installed
+        page feeds.</p>
+    <p>
+        Below is a listing of the function HermesVersionPageCheck, for further information
+        unzip the Hermes.gadget file and inspect the "main.js" file.</p>
+    <pre>
+function HermesVersionPageCheck(f, matches) {
+    var title = null;
+    var description = null;
+    if (matches.length == 0) {
+        title = f.failTitle;
+        description = f.failDescription;
+    } else {
+        var ver = ReplaceMatches(f, matches, "$$/1", null, null);
+        if (ver > System.Gadget.version) {
+            title = f.successTitle;
+            description = f.successDescription;
+        } else {
+            title = f.rejectTitle;
+            description = f.rejectDescription;
+        }
+    }
+    title = ReplaceMatches(f, matches, title, null, null);
+    description = ReplaceMatches(f, matches, description, null, null);
+    return new MiniItem(title, description);
+}
+</pre>
+    <h2>
+        Alerts</h2>
+    Alerts can be generated when a particular news article occurs. For example, when
+    a news article mentions 'Microsoft' an email, sound, or flyout can be triggered.<br />
+    When using alerts remember to enable the associated feed or page too!<br />
+    <h3>
+        pattern</h3>
+    The mechanism for setting up alerts is very similar to that for setting up a page
+    monitor (mentioned above). Regular expressions can be specified for matching on the 
+    news item's, folder, categories, name, title, or description. A new alert item is generated
+    by calling a function that checks these regular expression patterns for a match
+    against the incoming news items. In most cases the standard function 'StandardAlertCheck'
+    can be used, see below for example code. This generates an alert item when a match
+    occurs for each pattern. Empty patterns are ignored.<br />
+    <h3>
+        success</h3>
+    The content of the alert item is determined by the title and description given under
+    the success tab. Note that variable substitution is applied to the strings prior
+    to generating the news item, as per page items.<br />
+    <h3>
+        func</h3>
+    This option specifies the function used to check for an alert event. In most cases
+    the <i>func</i> value can be set to refer to the inbuilt function: StandardAlertCheck.
+    The code used in the standard alert checking function is as follows:<br />
+    <pre>
+// Needs to be efficient since called frequently.
+function StandardAlertCheck(a, f, item, idx) {
+    var p = null;
+    var t = null;
+    var ok = true;
+    var r0 = (a.reCategories == null) ? null : (t = a.reCategories.exec(item.categories), ok = (t != null), t);
+    if (ok) {
+        var r1 = (a.reTitle == null) ? null : (t = a.reTitle.exec(item.title), ok = (t != null), t);
+        if (ok) {
+            var r2 = (a.reDescription == null) ? null : (t = a.reDescription.exec(item.description), ok = (t != null), t);
+            if (ok) {
+                var r3 = (a.reLink == null) ? null : (t = a.reLink.exec(item.link), ok = (t != null), t);
+                if (ok) {
+                    var matches = new Array(f.matchesFolder[idx], f.matchesName[idx], r0, r1, r2, r3);
+                    var title = ReplaceMatches(f, matches, a.successTitle, item, a);
+                    var description = ReplaceMatches(f, matches, a.successDescription, item, a);
+                    p = new MiniItem(title, description);
+                    ClearArray(matches);
+                }
+            }
+        }
+    }
+    return p;
+}
+</pre>
+    <h3>
+        Email</h3>
+    The email sending mechanism requires the ActiveX Object 'CDO.Message'. This comes
+    with most versions of Outlook and is usable even if you don't use Outlook as your
+    email client. It only needs to be installed, you don't have to set up any accounts
+    in Outlook.<br />
+    When Outlook is the email client it may put the incoming Hermes emails in the junk folder,
+    so you may need to add the Hermes sender email address to Outlook's "Safe Senders" list.<br /> 
+    <h3>
+        Sound files</h3>
+    Alert sound notifications are produced by playing a sound from a wav format file. 
+    The default file is 'C:\\Windows\\Media\\Windows Notify.wav'. 
+    You will need to change this if your sound file is located in a different directory.<br />
+    </br>
+    </div>
+  
+    <a class="toggle" href="javascript:toggle('instances');">Running Multiple Instances</a><br />
+<div id="instances" style="display: none">    
+    Current settings are stored in the gadget's file archive, so to run multiple instances
+    install multiple copies with a different name, such as Hermes1, Hermes2.
+    <br />
+    <br />
+    </div>
+    
+<a class="toggle" href="javascript:toggle('performance');">Performance</a><br />
+<div id="performance" style="display: none">    
+    CPU usage is proportional to the number of active feeds and news items.<br />
+    With about 10 active feeds and 50 active news items, CPU usage should be no more than one
+    or two percent - depending on the processor speed.<br />
+    <br />
+    Flicker. On some machines flickering is noticeable during scrolling.
+    If anyone knows a way of eliminating this please let me know! 
+    Tip: reducing the contrast via the Display tab helps.
+    <br />
+    <br />
+    </div>
+</body>
+</html>
